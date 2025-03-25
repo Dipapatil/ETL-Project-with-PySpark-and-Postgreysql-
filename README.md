@@ -1,10 +1,10 @@
-# ETL-Project-with-PySpark-and-Postgreysql-
-An ETL project that designs and builds a PostgreSQL database with tables, extracts data from CSV files, loads it into the database, transforms the data using PySpark, and schedules the ETL pipeline with Airflow.
+# ETL-Project-with-PySpark-and-Postgresql-
+An ETL project that designs and builds a PostgreSQL database with tables, extracts data from CSV files, loads it into the database, transforms the data using PySpark.
 
 ## Tools used: 
-Postgrey Sql, Pycharm, Pyspark, jdk, Apache Spark
+PostgreSql, Pycharm, Pyspark, jdk, Apache Spark
 
-## Step 1: creating database and tables in SQL Shel(psql) of postgreysql:
+## Step 1: creating database and tables in SQL Shel(psql) of postgresql:
 - Open SQL Shell, and create database and tables as shown below,
 - CREATE DATABASE etl_project;
 - \c etl_project           -- this is used to connect to database
@@ -35,4 +35,7 @@ my csv does not include header so skipping it.
 - This is a script from pycharm to transform data by summarizing it. [Pyspark Script](https://github.com/Dipapatil/ETL-Project-with-PySpark-and-Postgreysql-/blob/main/main.py)
 - New summarized table will be created in database after running python script.
 - ![Screenshot of Transformed data](https://github.com/Dipapatil/ETL-Project-with-PySpark-and-Postgreysql-/blob/main/transformed_Data.png)
+## Install Apache Airflow and schedule the task
+- Use this command to install airflow : pip install apache-airflow
+
       
