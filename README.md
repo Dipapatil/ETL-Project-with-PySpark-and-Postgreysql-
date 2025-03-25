@@ -9,8 +9,10 @@ Postgrey Sql, Pycharm, Pyspark, jdk, Apache Spark
 - CREATE DATABASE etl_project;
 - \c etl_project           -- this is used to connect to database
 
-## Step 2: extract data from csv files and upload into the database tables, if csv file contains header then use the syntax : \copy movies from 'path of file' DELIMITER ',' CSV HEADER;
-  my csv does not include header so skipping it.
+## Step 2: extract data from csv files and upload into the database tables,
+if csv file contains header then use the syntax : \copy movies from 'path of file' DELIMITER ',' CSV HEADER;
+my csv does not include header so skipping it.
+![Screenshot of Extracting data from CSV](https://github.com/Dipapatil/ETL-Project-with-PySpark-and-Postgreysql-/blob/main/load_tables_from_csv_file.png)
 
 ## Step 3: Transformation using pyspark
 - You can install PySpark in PyCharm by running the command pip install pyspark in the terminal or by navigating to Settings > Project Interpreter, searching for PySpark package, and selecting it for installation.
@@ -28,5 +30,9 @@ Postgrey Sql, Pycharm, Pyspark, jdk, Apache Spark
   - %SPARK_HOME%
   - %PYTHONPATH%
   - %SPARK_HOME%\python\lib\py4j-0.10.9.7 -src.zip
-- then open command prompt and type pyspark to chekck if it is installed correctly.
+    ![Screenshot of System Varialbes](https://github.com/Dipapatil/ETL-Project-with-PySpark-and-Postgreysql-/blob/main/environment%20vaiables.png)
+- Open command prompt and type pyspark to chekck if it is installed correctly.
+- This is a script from pycharm to transform data by summarizing it. [Pyspark Script](https://github.com/Dipapatil/ETL-Project-with-PySpark-and-Postgreysql-/blob/main/main.py)
+- New summarized table will be created in database after running python script.
+- ![Screenshot of Transformed data](https://github.com/Dipapatil/ETL-Project-with-PySpark-and-Postgreysql-/blob/main/transformed_Data.png)
       
