@@ -20,7 +20,7 @@ def extract_movies_to_dataframe():
         .option("url","jdbc:postgresql://localhost:5432/etl_project") \
         .option("dbtable","movies") \
         .option("user","postgres") \
-        .option("password","Bholenath12*") \
+        .option("password","your_password") \
         .option("driver","org.postgresql.Driver") \
         .load()
     #print(movies_df.show())
@@ -34,7 +34,7 @@ def exract_users_table_to_df():
         .option("url","jdbc:postgresql://localhost:5432/etl_project") \
         .option("dbtable","users") \
         .option("user","postgres") \
-        .option("password","Bholenath12*") \
+        .option("password","") \
         .option("driver","org.postgresql.Driver") \
         .load()
     #movies_df.show()
@@ -56,7 +56,7 @@ def load_to_table(df):
     mode = "overwrite"
     url="jdbc:postgresql://localhost:5432/etl_project"
     properties = {  "user": "postgres",
-                    "password": "Bholenath12*",
+                    "password": "your_password",
                     "driver":"org.postgresql.Driver"}
     df.write.jdbc(url=url,
                   table = "avg_ratings",
